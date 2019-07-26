@@ -11,13 +11,12 @@ const GlobalAppBar = ({ history }) => {
   return (
     <AppBar>
       <Toolbar>
-        <Typography
-          variant="h6"
-          style={{ marginRight: 30 }}
-          onClick={() => history.push(DEFAULT)}
-        >
+        <Typography variant="h6" style={{ marginRight: 30 }}>
           Igneous Demo
         </Typography>
+        <Button color="inherit" onClick={() => history.push(DEFAULT)}>
+          Home
+        </Button>
         <Button color="inherit" onClick={() => history.push(DASHBOARD)}>
           Dashboard
         </Button>
