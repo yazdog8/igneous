@@ -1,0 +1,16 @@
+@import "functions";
+
+$os-font-name: "Roboto" !default;
+$os-font-size: 13px !default;
+$os-font-line-height: 1.231em !default;
+$os-font-color: #272727 !default;
+$os-font-family: $os-font-name, Arial, sans-serif !default;
+
+$os-font-weight-light: 300 !default;
+$os-font-weight-regular: 400 !default;
+$os-font-weight-bold: 500 !default;
+
+$os-font-url-base: "https://fonts.googleapis.com/css?family=";
+$os-font-url-name: str-replace($os-font-name, " ", "+");
+$os-font-url-weights: "#{$os-font-weight-light},#{$os-font-weight-regular},#{$os-font-weight-bold}";
+$os-font-url: "#{$os-font-url-base}#{$os-font-url-name}:#{$os-font-url-weights}";
