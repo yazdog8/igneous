@@ -9,6 +9,7 @@ import store from "./data/store"
 import { DEFAULT, DASHBOARD } from "./common/constants/routingConstants"
 
 import Dashboard from "./routes/dashboard/Dashboard"
+import Welcome from "./routes/welcome/Welcome"
 
 function App() {
   const muiTheme = createMuiTheme({
@@ -22,7 +23,7 @@ function App() {
         <ConnectedRouter history={history}>
           <CssBaseline />
           <Switch>
-            <Route exact path={DEFAULT} render={() => <h1>Default</h1>} />
+            <Route exact path={DEFAULT} component={Welcome} />
             <Route path={DASHBOARD} component={Dashboard} />
           </Switch>
         </ConnectedRouter>
