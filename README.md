@@ -1,8 +1,19 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+##Instructions
+
+Start the data server by running `npm server`.
+
+Start the application by running `npm start`.
+
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm server`
+
+Runs node server that will provide application data.<br>
+Open [http://localhost:5000](http://localhost:5000/) to view it in the browser.
 
 ### `npm start`
 
@@ -11,6 +22,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
+
+### `npm devserver`
+
+Runs the node server with nodemon so it will reload with edits.<br>
+Open [http://localhost:5000](http://localhost:5000/) to view it in the browser.
+
 
 ### `npm test`
 
