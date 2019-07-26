@@ -1,0 +1,33 @@
+@import "~normalize-scss/sass/normalize";
+
+@import "./globals/colors";
+@import "./globals/typography";
+
+@import url($os-font-url);
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+  font-family: $os-font-family;
+  font-size: $os-font-size;
+  line-height: $os-font-line-height;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: $os-base !important;
+  color: $os-font-color;
+  margin: 0;
+}
+
+#root {
+  height: 100%;
+}
