@@ -1,5 +1,9 @@
 import { createReducer } from "redux-starter-kit"
-import { setDashboardValue, setLoadingValue } from "./dashboardActions"
+import {
+  setDashboardData,
+  setLoadingValue,
+  resetDashboardData,
+} from "./dashboardActions"
 
 const dashboardInitialState = {
   isLoading: true,
@@ -7,7 +11,11 @@ const dashboardInitialState = {
 }
 
 export default createReducer(dashboardInitialState, {
-  [setDashboardValue]: (state, action) => ({ ...state, data: action.payload }),
+  [setDashboardData]: (state, action) => ({ ...state, data: action.payload }),
+  [resetDashboardData]: (state, action) => ({
+    ...state,
+    data: dashboardInitialState.data,
+  }),
   [setLoadingValue]: (state, action) => ({
     ...state,
     isLoading: action.payload,

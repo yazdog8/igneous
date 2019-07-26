@@ -5,7 +5,9 @@ import {
   getUsaGDP,
 } from "../../../common/http/data/dashboard"
 
-export const setDashboardValue = createAction("DASHBOARD_SET_VALUE")
+export const setDashboardData = createAction("DASHBOARD_SET_DATA")
+
+export const resetDashboardData = createAction("DASHBOARD_RESET_DATA")
 
 export const setLoadingValue = createAction("DASHBOARD_SET_LOADING")
 
