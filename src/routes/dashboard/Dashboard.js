@@ -13,7 +13,7 @@ import ListSubheader from "@material-ui/core/ListSubheader"
 import {
   getTimestampValues,
   resetDashboard,
-  setTimeSeriesValue,
+  setTimeSeries,
   updateIsShown,
 } from "./data/dashboardActions"
 import { TIMESERIES, USA_GDP, HOURLY, WEEKLY } from "./data/dashboardConstants"
@@ -24,8 +24,9 @@ import styles from "./dashboard.module.scss"
 const Dashboard = ({
   isLoading,
   isShown,
+  timeSeries,
   data,
-  actions: { getTimestampValues, resetDashboard, updateIsShown },
+  actions: { getTimestampValues, resetDashboard, updateIsShown, setTimeSeries },
 }) => {
   useEffect(() => {
     getTimestampValues()
@@ -72,6 +73,32 @@ const Dashboard = ({
             </ListItem>
           </List>
           <Divider />
+          <List>
+            <ListSubheader>Select Time Series</ListSubheader>
+            <ListItem button onClick={() => setTimeSeries(WEEKLY)}>
+              <ListItemIcon>
+                <Checkbox
+                  edge="start"
+                  checked={timeSeries === WEEKLY}
+                  tabIndex={-1}
+                  disableRipple
+                />
+              </ListItemIcon>
+              <ListItemText primary={WEEKLY} />
+            </ListItem>
+            <ListItem button onClick={() => setTimeSeries(HOURLY)}>
+              <ListItemIcon>
+                <Checkbox
+                  edge="start"
+                  checked={timeSeries === HOURLY}
+                  tabIndex={-1}
+                  disableRipple
+                />
+              </ListItemIcon>
+              <ListItemText primary={HOURLY} />
+            </ListItem>
+          </List>
+          <Divider />
         </Drawer>
         <div className={styles["dashboard-content"]}>Foo</div>
       </div>
@@ -83,6 +110,7 @@ Dashboard.propTypes = {
   isLoading: PropTypes.bool,
   data: PropTypes.object,
   isShown: PropTypes.arrayOf(PropTypes.string),
+  timeSeries: PropTypes.string,
   actions: PropTypes.objectOf(PropTypes.func),
 }
 
@@ -92,13 +120,14 @@ const mapStateToProps = state => {
     isLoading: dashboard.isLoading,
     data: dashboard.data,
     isShown: dashboard.isShown,
+    timeSeries: dashboard.timeSeries,
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(
-      { getTimestampValues, resetDashboard, setTimeSeriesValue, updateIsShown },
+      { getTimestampValues, resetDashboard, setTimeSeries, updateIsShown },
       dispatch
     ),
   }

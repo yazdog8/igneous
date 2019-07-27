@@ -29,7 +29,7 @@ export default createReducer(dashboardInitialState, {
   }),
   [setTimeSeriesValue]: (state, action) => ({
     ...state,
-    timeSeries: action.payload,
+    timeSeries: action.payload || WEEKLY,
   }),
   [resetDisplay]: state => ({
     ...state,
