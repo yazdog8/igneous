@@ -2,7 +2,7 @@ import React, { memo, useEffect } from "react"
 import PropTypes from "prop-types"
 import { connect } from "react-redux"
 import { bindActionCreators } from "redux"
-import { getTimestampValues, resetDashboardData } from "./data/dashboardActions"
+import { getTimestampValues, resetDashboard } from "./data/dashboardActions"
 import GlobalAppTemplate from "../../common/components/templates/globalAppTemplate/GlobalAppTemplate"
 import Loading from "../../common/components/atoms/loading/Loading"
 import styles from "./dashboard.module.scss"
@@ -10,16 +10,16 @@ import styles from "./dashboard.module.scss"
 const Dashboard = ({
   isLoading,
   data,
-  actions: { getTimestampValues, resetDashboardData },
+  actions: { getTimestampValues, resetDashboard },
 }) => {
   console.log(data)
   useEffect(() => {
     getTimestampValues()
 
     return () => {
-      resetDashboardData()
+      resetDashboard()
     }
-  }, [getTimestampValues, resetDashboardData])
+  }, [getTimestampValues, resetDashboard])
 
   return (
     <GlobalAppTemplate>
@@ -34,6 +34,7 @@ const Dashboard = ({
 Dashboard.propTypes = {
   isLoading: PropTypes.bool,
   data: PropTypes.object,
+  timeSeries: PropTypes.string,
   actions: PropTypes.objectOf(PropTypes.func),
 }
 
@@ -48,7 +49,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(
-      { getTimestampValues, resetDashboardData },
+      { getTimestampValues, resetDashboard },
       dispatch
     ),
   }
