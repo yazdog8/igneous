@@ -35,6 +35,9 @@ const Dashboard = ({
       resetDashboard()
     }
   }, [getTimestampValues, resetDashboard])
+
+  const hasTimeSeries = isShown.includes(TIMESERIES)
+  const hasGDP = isShown.includes(USA_GDP)
   return (
     <GlobalAppTemplate>
       <div className={styles["dashboard-container"]}>
@@ -53,7 +56,7 @@ const Dashboard = ({
               <ListItemIcon>
                 <Checkbox
                   edge="start"
-                  checked={isShown.includes(TIMESERIES)}
+                  checked={hasTimeSeries}
                   tabIndex={-1}
                   disableRipple
                 />
@@ -64,7 +67,7 @@ const Dashboard = ({
               <ListItemIcon>
                 <Checkbox
                   edge="start"
-                  checked={isShown.includes(USA_GDP)}
+                  checked={hasGDP}
                   tabIndex={-1}
                   disableRipple
                 />
@@ -100,7 +103,10 @@ const Dashboard = ({
           </List>
           <Divider />
         </Drawer>
-        <div className={styles["dashboard-content"]}>Foo</div>
+        <div className={styles["dashboard-content"]}>
+          {hasTimeSeries && <div>Time Series - {timeSeries}</div>}
+          {hasGDP && <div>USA GDP</div>}
+        </div>
       </div>
     </GlobalAppTemplate>
   )
