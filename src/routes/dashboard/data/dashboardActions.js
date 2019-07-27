@@ -26,7 +26,7 @@ export const setTimeSeries = (value = WEEKLY) => dispatch => {
 export const getTimestampValues = () => (dispatch, getState) => {
   dispatch(setLoadingValue(true))
   const timeSeries =
-    getState().dashboard.timeSeries === "weekly"
+    getState().dashboard.timeSeries === WEEKLY
       ? getWeeklyTimeSeries
       : getHourlyTimeSeries
   const fetchData = [getUsaGDP(), timeSeries()]
