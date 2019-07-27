@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc440e90-e647-4682-ac18-06485059dc77" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/common/components/atoms/charts/lineChart/LineChart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/dashboard/common/utils/dashboardUtils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/dashboard/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -149,7 +153,8 @@
       <workItem from="1564114794984" duration="6208000" />
       <workItem from="1564159382853" duration="11313000" />
       <workItem from="1564202143463" duration="70000" />
-      <workItem from="1564202244405" duration="4688000" />
+      <workItem from="1564202244405" duration="4863000" />
+      <workItem from="1564252094953" duration="4077000" />
     </task>
     <task id="LOCAL-00001" summary="Igneous buildout">
       <created>1564032871653</created>
@@ -326,7 +331,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564207007308</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Show/Hide display areas">
+      <created>1564207470787</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1564207470787</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -351,7 +363,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -380,6 +394,7 @@
     <MESSAGE value="Feed data to dashboard data" />
     <MESSAGE value="Drawer to show/hide charts" />
     <MESSAGE value="Reload data based on time series selected" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reload data based on time series selected" />
+    <MESSAGE value="Show/Hide display areas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Show/Hide display areas" />
   </component>
 </project>

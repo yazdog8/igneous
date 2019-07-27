@@ -17,8 +17,10 @@ import {
   updateIsShown,
 } from "./data/dashboardActions"
 import { TIMESERIES, USA_GDP, HOURLY, WEEKLY } from "./data/dashboardConstants"
+import { returnChartData } from "./common/utils/dashboardUtils"
 import GlobalAppTemplate from "../../common/components/templates/globalAppTemplate/GlobalAppTemplate"
 import Loading from "../../common/components/atoms/loading/Loading"
+import LineChart from "../../common/components/atoms/charts/lineChart/LineChart"
 import styles from "./dashboard.module.scss"
 
 const Dashboard = ({
@@ -38,6 +40,8 @@ const Dashboard = ({
 
   const hasTimeSeries = isShown.includes(TIMESERIES)
   const hasGDP = isShown.includes(USA_GDP)
+  const timeSeriesChartData = returnChartData(data.cpuTimeSeries)
+  const usaGdpChartData = returnChartData(data.usaGDP)
   return (
     <GlobalAppTemplate>
       <div className={styles["dashboard-container"]}>
@@ -104,8 +108,20 @@ const Dashboard = ({
           <Divider />
         </Drawer>
         <div className={styles["dashboard-content"]}>
-          {hasTimeSeries && <div>Time Series - {timeSeries}</div>}
-          {hasGDP && <div>USA GDP</div>}
+          {hasTimeSeries && !isLoading && (
+            <LineChart
+              lineData={timeSeriesChartData.lineSeriesData}
+              labels={timeSeriesChartData.labels}
+              title={`Time Series - ${timeSeries}`}
+            />
+          )}
+          {hasGDP && !isLoading && (
+            <LineChart
+              lineData={usaGdpChartData.lineSeriesData}
+              labels={usaGdpChartData.labels}
+              title="USA GDP"
+            />
+          )}
         </div>
       </div>
     </GlobalAppTemplate>
