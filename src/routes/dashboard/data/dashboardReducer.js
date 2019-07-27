@@ -3,19 +3,22 @@ import {
   setDashboardData,
   setLoadingValue,
   resetDashboard,
+  setTimeSeriesValue,
+  resetDisplay,
+  updateIsShown,
 } from "./dashboardActions"
+import { WEEKLY, TIMESERIES, USA_GDP } from "./dashboardConstants"
 
 const dashboardInitialState = {
-  displayCharts: [],
+  isShown: [TIMESERIES, USA_GDP],
   isLoading: true,
-  timeSeries: "weekly",
+  timeSeries: WEEKLY,
   data: {},
 }
 
 export default createReducer(dashboardInitialState, {
   [setDashboardData]: (state, action) => {
-    const displayCharts = Object.keys(action.payload)
-    return { ...state, data: action.payload, displayCharts }
+    return { ...state, data: action.payload }
   },
   [resetDashboard]: () => ({
     ...dashboardInitialState,
@@ -24,4 +27,21 @@ export default createReducer(dashboardInitialState, {
     ...state,
     isLoading: action.payload,
   }),
+  [setTimeSeriesValue]: (state, action) => ({
+    ...state,
+    timeSeries: action.payload,
+  }),
+  [resetDisplay]: state => ({
+    ...state,
+    isShown: dashboardInitialState.isShown,
+  }),
+  [updateIsShown]: (state, action) => {
+    let isShown = [...state.isShown]
+    if (isShown.includes(action.payload)) {
+      isShown = isShown.filter(display => display !== action.payload)
+    } else {
+      isShown.push(action.payload)
+    }
+    return { ...state, isShown }
+  },
 })

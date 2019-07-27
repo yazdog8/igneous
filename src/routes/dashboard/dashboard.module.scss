@@ -1,4 +1,24 @@
 .dashboard-container {
   position: relative;
   height: 100%;
+  display: flex;
+}
+
+.drawer {
+  width: 240px;
+  flex-grow: 0;
+}
+
+.drawer-paper {
+  width: 240px;
+  z-index: 1 !important;
+}
+
+.drawer-spacer {
+  height: 64px;
+}
+
+.dashboard-content {
+  flex-grow: 1;
+  padding: 24px;
 }
