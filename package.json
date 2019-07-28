@@ -31,13 +31,12 @@
     "nodemon": "^1.19.1",
     "prettier": "^1.18.2",
     "redux-logger": "^3.0.6",
-    "source-map-explorer": "^2.0.1"
+    "source-map-explorer": "^2.0.1",
+    "yarn": "^1.17.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "server": "node server.js",
     "devserver": "nodemon server.js",
     "analyze": "source-map-explorer 'build/static/js/*.js'",

@@ -14,7 +14,7 @@ You should now be able to view the project.
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, you can run (instead of NPM if you have Yarn you can use that):
 
 ### `npm server`
 
@@ -43,6 +43,10 @@ The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run build:analyze`
+
+Creates a build and runs analysis tools on the build size.
 
 ## Learn More
 

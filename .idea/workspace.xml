@@ -4,6 +4,7 @@
     <list default="true" id="fc440e90-e647-4682-ac18-06485059dc77" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -151,7 +152,7 @@
       <workItem from="1564202143463" duration="70000" />
       <workItem from="1564202244405" duration="4863000" />
       <workItem from="1564252094953" duration="4449000" />
-      <workItem from="1564337499963" duration="388000" />
+      <workItem from="1564337499963" duration="799000" />
     </task>
     <task id="LOCAL-00001" summary="Igneous buildout">
       <created>1564032871653</created>
@@ -349,7 +350,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564257524743</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Update documentation readme file">
+      <created>1564337930740</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1564337930740</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -383,7 +391,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Igneous buildout" />
     <MESSAGE value="Project setup" />
     <MESSAGE value="Add nodemon. Update prettier" />
     <MESSAGE value="Commit files updated by prettier changes" />
@@ -408,6 +415,7 @@
     <MESSAGE value="Show/Hide display areas" />
     <MESSAGE value="Display working chart" />
     <MESSAGE value="Fix data gathering bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix data gathering bug" />
+    <MESSAGE value="Update documentation readme file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update documentation readme file" />
   </component>
 </project>
