@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fc440e90-e647-4682-ac18-06485059dc77" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -150,7 +151,8 @@
       <workItem from="1564202143463" duration="70000" />
       <workItem from="1564202244405" duration="4863000" />
       <workItem from="1564252094953" duration="4449000" />
-      <workItem from="1564337499963" duration="2815000" />
+      <workItem from="1564337499963" duration="2892000" />
+      <workItem from="1564342836085" duration="18000" />
     </task>
     <task id="LOCAL-00001" summary="Igneous buildout">
       <created>1564032871653</created>
@@ -383,7 +385,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564341653070</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Package.json">
+      <created>1564342210162</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1564342210162</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -417,7 +426,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update files" />
     <MESSAGE value="Prettier updates" />
     <MESSAGE value="Set up server to return values" />
     <MESSAGE value="Set up style infrastructure." />
@@ -442,6 +450,7 @@
     <MESSAGE value="Update docs. Add Yarn for dependency management." />
     <MESSAGE value="Welcome message. Polish." />
     <MESSAGE value="Cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleanup" />
+    <MESSAGE value="Package.json" />
+    <option name="LAST_COMMIT_MESSAGE" value="Package.json" />
   </component>
 </project>
