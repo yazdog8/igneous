@@ -82,7 +82,12 @@ const Dashboard = ({
           <Divider />
           <List>
             <ListSubheader>Select Time Series</ListSubheader>
-            <ListItem button onClick={() => setTimeSeries(WEEKLY)}>
+            <ListItem
+              button
+              onClick={() => {
+                if (timeSeries !== WEEKLY) setTimeSeries(WEEKLY)
+              }}
+            >
               <ListItemIcon>
                 <Checkbox
                   edge="start"
@@ -93,7 +98,12 @@ const Dashboard = ({
               </ListItemIcon>
               <ListItemText primary={WEEKLY} />
             </ListItem>
-            <ListItem button onClick={() => setTimeSeries(HOURLY)}>
+            <ListItem
+              button
+              onClick={() => {
+                if (timeSeries !== HOURLY) setTimeSeries(HOURLY)
+              }}
+            >
               <ListItemIcon>
                 <Checkbox
                   edge="start"
